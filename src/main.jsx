@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from './lib/store.js'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename='/gocart'>
     <Provider store={store}>
       <App />
     </Provider>
