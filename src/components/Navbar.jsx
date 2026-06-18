@@ -1,11 +1,9 @@
-import { Menu, Search, ShoppingCart, XIcon } from 'lucide-react';
+import { Search, ShoppingCart } from 'lucide-react';
 import  { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const router = useNavigate();
 
@@ -76,12 +74,6 @@ const Navbar = () => {
                         Login
                     </button>
                 </div>
-                <div className='flex items-center gap-3 sm:hidden'>
-                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                    className='w-6 h-4 px-6'>
-                        <Menu className='' />
-                    </button>
-                </div>
 
                 {/* Mobile User Button  */}
                 <div className="sm:hidden">
@@ -89,11 +81,6 @@ const Navbar = () => {
                     bg-indigo-500 hover:bg-indigo-600 text-sm 
                     transition text-white rounded-full">
                         Login
-                    </button>
-                    
-                    <button onClick={() => setIsMenuOpen(false)}
-                        className='w-6 h-4 px-6'>
-                        <XIcon />
                     </button>
                 </div>
             </div>
